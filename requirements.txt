@@ -2,4 +2,4 @@ cs50
 flask
 flask_session
 werkzeug
-Gunicurn
+Gunicorn
