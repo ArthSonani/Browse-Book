@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>log in</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+    <form action="/login" class="login-form" method="post">
+        <div class="signin">
+            <div class="signin-logo"></div>
+            <p>Sign in</p>
+
+            <input type="text" name="username" placeholder="Username" class="signin-input" required />
+            <input type="password" name="password" placeholder="Password" class="signin-input" required />
+
+            <br />
+            <div class="signin-error">
+                {% if error %}
+                <small style="color: red">{{ error }}</small>
+                {% endif %}
+            </div>
+
+            <div class="singin-lower">
+                <a href="register">Create account</a>
+                <button class="signin-button" type="submit">Sign in</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

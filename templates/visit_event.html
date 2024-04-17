@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visit event</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+
+<body style="background-color: #e8ecf1;">
+    <!-- NAVBAR -->
+    <header>
+        <div class="navbar">
+            <div class="nav-1">
+                <div class="nav-logo"></div>
+            </div>  
+
+            <div class="nav-2">
+                <a href="/create_events" class="nav-item"><span class="material-symbols-outlined">
+                        add_circle
+                    </span> &nbsp; CREATE EVENT
+                </a>
+                <a href="/" class="nav-item"><span class="material-symbols-outlined">home</span> &nbsp;
+                    HOME
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="visit-card">
+        <div class="visit-card-intro">
+            <div class="visit-card-intro-thumbnail">
+                <img class="visit-img" src="{{ url_for('static', filename='events_img/' ~ event['thumbnail']) }}" />
+            </div>
+            <div class="visit-card-intro-name">
+                <h1>{{ event['name'] }}</h1>
+                <span>
+                    <span class="material-symbols-outlined">event</span>
+                    {{ event['start_date'] }}
+                </span>
+                <br>
+                <span>
+                    <span class="material-symbols-outlined">schedule</span>
+                    {{ event['start_time'] }}
+                </span>
+            </div>
+            <div class="tickets"><button><i class="fa-solid fa-ticket"></i> Tickets</button></div>
+        </div>
+
+        <div class="visit-card-second-part">
+            <div class="visit-card-banner">
+                <div class="visit-card-banner-img">
+                    <img class="visit-img" src="{{ url_for('static', filename='events_img/' ~ event['banner']) }}" />
+                </div>
+                <div class="visit-card-description">
+                    <h2> {{ event['name'] }} </h2>
+                    <p> {{ event['description'] }} </p>
+
+                    <p>
+
+                        Date: {{ event['start_date'] }}<br>
+                        Time: {{ event['start_time'] }} Onwards<br><br>
+                        Address: {{ locations['address'] }}
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Side Info -->
+            <div class="side-info">
+
+                <div class="ticket-info" style="color: black;">
+                    <div class="t1">Ticket: <span style="font-size: large; font-weight: 500;">{{ tickets['unsold']
+                            }}</span> <span style="font-size: 0.9rem; font-weight: 500;">remaining</span></div>
+                    <div class="t1">Price: <span style="font-size: large; font-weight: 500;">{{ tickets['price']
+                            }}</span> <span style="font-size: 0.9rem; font-weight: 500;">onwards</span></div>
+                </div>
+
+                <!-- Rating and review -->
+                <!-- <div class="review-rating">
+                    <form class="rating" action="/visit_event" method="post">
+                        <div class="rate">
+                            <h2>Rating</h2>
+                            <i class="fa-solid fa-star"></i>    <i class="fa-solid fa-star"></i>    <i class="fa-solid fa-star"></i>    <i class="fa-solid fa-star"></i>    <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="review">
+                            <h2>Review</h2>
+                            <textarea class="form-control" name="review" placeholder="Write a review"></textarea>
+                            <button type="submit">Give Review</button>
+                        </div>
+
+                    </form>
+                </div> -->
+
+                <!-- Date & Time -->
+                <div class="date-and-time">
+                    <h2>Date & Time</h2>
+                    <span id="dt-and-tm"><span class="material-symbols-outlined" style="font-size: 1rem;">event</span>
+                        {{ event['start_date'] }}
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">schedule</span> {{
+                        event['start_time'] }} </span>
+                    <p style="padding-left: 80px; margin: auto; font-weight: 600;"> To </p>
+                    <span id="dt-and-tm"><span class="material-symbols-outlined" style="font-size: 1rem;">event</span>
+                        {{ event['end_date'] }}
+                        <span class="material-symbols-outlined" style="font-size: 1rem;">schedule</span> {{
+                        event['end_time'] }} </span>
+                </div>
+
+                <!-- Location -->
+                <div class="location">
+                    <h2>Location</h2>
+                    <p><i class="fa-solid fa-location-dot fa-lg"></i> &nbsp; {{ locations['location'] }}</p>
+                    <p><span style="font-weight: 600;">Address: </span> {{ locations['address'] }}</p>
+                    <p><span style="font-weight: 600;">City: </span> {{ locations['city'] }}</p>
+                    <p><span style="font-weight: 600;">State: </span> {{ locations['state'] }}</p>
+                </div>
+
+                <!-- Spread the Word Box -->
+                <div class="spread-the-word-box">
+                    <h2>Spread the Word</h2>
+                    <div class="social-icons">
+                        <a><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                        <a><i class="fa-brands fa-twitter fa-xl"></i></a>
+                        <a><i class="fa-brands fa-facebook fa-xl"></i></a>
+                        <a><i class="fa-brands fa-instagram fa-xl"></i></a>
+                    </div>
+                    <p>Share with your friends through social media</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <div style="background-image: url(/static/src/logo.png); background-size:cover; width: 120px; height: 100px;"></div>
+
+            <p class="footer-links">
+                <a href="/">EXPLORE EVENTS</a>
+                &nbsp; | &nbsp;
+                <a href="/create_events">CREATE EVENTS</a>
+            </p>
+
+            <p class="footer-company-name">Browse&Book ©️ 2015</p>
+        </div>
+
+
+        <div class="footer-right">
+
+            <p class="footer-company-about" style="font-size: medium;">
+                <span style="font-size: large;">About</span>
+                Discover a world of events right in your neighborhood with B&B. From concerts to community
+                gatherings, our platform connects you to exciting happenings near you. Join, create, and explore events
+                with ease on B&B.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="/static/action.js"></script>
+</body>
+
+</html>

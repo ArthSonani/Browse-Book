@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body">
+    <form action="/register" class="register-form" method="post">
+        <div class="register-box">
+
+            <div class="signin-logo" style="margin-top: 20px;"></div>
+            <h2>Register</h2>
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Name" maxlength="10" class="register-input" required>
+            </div>
+            <div class="input-box" style="margin-top: 10px;">
+                <input type="text" name="username" placeholder="username" class="register-input" required>
+            </div>
+
+            <p class="register-p">Create password</p>
+            <div class="input-box" style="margin-top: 10px; margin-bottom: 80px;">
+                <input type="password" name="password" placeholder="Password" class="register-input" required>
+                <input type="password" name="confirmation" placeholder="Confirm password" class="register-input" required>
+            </div>
+
+            <div class="signin-error">
+                {% if error %}
+                    <small style="color: red;">{{ error }}</small>
+                {% endif %}
+            </div>
+
+            <button class="register-button" type="submit">Sign up</button>
+
+        </div>
+    </form>
+    </body>
+
+</html>
