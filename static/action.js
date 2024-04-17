@@ -48,6 +48,10 @@ function handleRadioChange() {
     }
 }
 
+radioButtons.forEach(button => {
+    button.addEventListener('change', handleRadioChange);
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const textContainer = document.getElementById("text");
