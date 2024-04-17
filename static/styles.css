@@ -437,48 +437,50 @@ form {
     background-color: rgb(1, 142, 224);
 }
 
+
+
+
 /* SIGN IN */
 .login-form {
     display: flex;
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 .signin {
     width: 30%;
     height: 510px;
-    border: 0.5px solid black;
+    border: 1.5px solid black;
     border-radius: 2%;
-    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .signin-logo {
-    width: 90px;
+    width: 50px;
     height: 40px;
     background-image: url(/static/src/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    margin: 40px 40% 10px 44%;
+    margin-top: 30px;
     border-radius: 7%;
 }
 
 .signin p {
     font-size: 1.5rem;
     text-align: center;
-}
-
-.signin-input {
-    margin-left: 50px;
-    margin-top: 20px;
-    width: 74%;
-    height: 50px;
-    padding-left: 10px;
+    font-weight: 600;
 }
 
 .singin-lower {
     height: 50px;
+    width: 100%;
     display: flex;
-    margin: 60px 20px 20px 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .singin-lower a {
@@ -487,95 +489,42 @@ form {
     height: 33px;
 }
 
+.singin-lower a:hover {
+    color: rgba(2, 116, 183, 0.5);
+}
+
 .singin-lower button {
     background-color: rgb(0, 162, 255);
     font-size: 14px;
     color: white;
     height: 35px;
-    width: 80px;
+    width: 100px;
     border-radius: 4px;
     border: none;
-    margin-left: 140px;
 }
 
 .signin-button:hover {
     background-color: rgb(27, 140, 205);
 }
 
-.signin span {
-    font-size: 14px;
-    margin: 50px 0px 10px 50px;
-    color: rgb(116, 115, 115);
-}
-
 .signin-error {
     display: flex;
     justify-content: center;
-    margin: 20px 0px;
 }
 
-/* REGISTER */
-.register-form {
+.register{
+    width: 32%;
+    height: 580px;
+    border: 1.5px solid black;
+    border-radius: 2%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    justify-content: space-evenly;
 }
 
-.register-logo {
-    width: 90px;
-    height: 40px;
-    background-image: url(/static/src/logo.png);
-    margin: 10px 40% 10px 40%;
-    border-radius: 7%;
-}
 
-.register-box {
-    width: 420px;
-    border: 0.9px solid rgb(142, 140, 140);
-    border-radius: 5px;
-    padding: 30px 10px;
-}
 
-.register-box h2 {
-    text-align: center;
-}
-
-.input-box {
-    width: 70%;
-    height: 35px;
-    margin: 30px 50px;
-}
-
-.register-input {
-    width: 100%;
-    height: 100%;
-    border: 0.7px solid rgb(96, 95, 95);
-    border-radius: 5px;
-    padding-left: 10px;
-    margin: 5px 0px;
-}
-
-.register-p {
-    margin-left: 50px;
-    color: grey;
-    font-size: 0.9rem;
-}
-
-.register-button {
-    background-color: rgb(0, 162, 255);
-    font-size: 14px;
-    color: white;
-    height: 35px;
-    width: 80px;
-    border-radius: 4px;
-    border: none;
-    margin-left: 35%;
-}
-
-.register-button:hover {
-    background-color: rgb(34, 148, 214);
-}
 
 /* EVENT PAGE */
 
