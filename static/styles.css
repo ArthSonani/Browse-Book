@@ -1335,6 +1335,9 @@ section {
 
 
 
+
+
+
 .my-nav{
     display: none;
 }
@@ -1366,5 +1369,12 @@ section {
     .signin {
         width: 90%;
         height: 400px;
+    }
+    .register{
+        width: 90%;
+        height: 550px;
+    }
+    .mb-3 .form-control{
+        height: 30px;
     }
 }
