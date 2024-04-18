@@ -1328,3 +1328,43 @@ section {
 	margin-right: 3px;
 	margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+.my-nav{
+    display: none;
+}
+
+.signin-info{
+    text-align: center; 
+    font-size: x-large; 
+    font-weight: 600; 
+    margin: 80px;
+}
+
+
+@media (max-width: 500px){
+    .my-nav{
+        display: block;
+        background-color: black;
+    }
+    .my-nav-div{
+        height: 100%;
+    }
+    .my-header{
+        display: none;
+    }
+    .signin-info{
+        margin-top: 70px;
+        margin-inline: 20px;
+        font-size: large;
+    }
+    .signin {
+        width: 90%;
+        height: 400px;
+    }
+}
