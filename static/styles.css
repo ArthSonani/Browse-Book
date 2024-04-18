@@ -180,7 +180,7 @@ body {
     right: 10%;
     display: flex;
     max-width: 100vw;
-    height: 230px;
+    height: 240px;
     overflow-x: scroll;
 }
 
@@ -1229,64 +1229,6 @@ section {
 	margin: 0;
 }
 
-/* Footer Center
-
-.footer-distributed .footer-center{
-	width: 35%;
-}
-
-.footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
-
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
-
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-  font-weight:400;
-	vertical-align: middle;
-	margin:0;
-}
-
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-	color:  lightseagreen;
-	text-decoration: none;;
-}
-
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
-
-.footer-distributed .footer-links .link-1:before {
-  content: none;
-} */
-
 /* Footer Right */
 
 .footer-distributed .footer-right{
@@ -1359,6 +1301,25 @@ section {
     font-size: x-large; 
     font-weight: 600; 
     margin: 80px;
+}
+
+.explore-search{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px; 
+    background: transparent;
+}
+.explore-not-found{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    height: 100%;
+}
+.explore-select{
+    width: 150px; 
+    background-color: transparent; 
+    color: white;
 }
 
 @media (max-width: 500px){
@@ -1470,6 +1431,10 @@ section {
         padding: 10px;
     }
 
+    .footer-right{
+        font-size: 5px;
+    }
+
     .footer-links{
         font-size: 10px;
     }
@@ -1496,5 +1461,97 @@ section {
 
     .footer-distributed{
         height: 280px;
+    }
+
+    .event-page-div{
+        margin-top: 55px;
+    }
+    .image-content h2{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .image-content h3{
+        margin-left: 20px;
+        font-size: 15px;
+    }
+    .event-page-option {
+        left: 20px;
+        bottom: 50px;
+        height: 150px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .event-page-intro-p{
+        margin: 20px;
+        font-size: 20px;
+    }
+    .for-you-line {
+        margin-top: 300px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .explore-search{
+        height: 50px;
+        width: 190px;
+    }
+    .explore-select{
+        height: 50px;
+        width: 150px;
+    }
+    .explore-not-found h2{
+        font-size: 15px;
+    }
+    .cards {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .cards a{
+        margin-inline: 0;
+        margin-bottom: 7%;
+    }
+    .card1 {
+        width: 300px;
+    }
+    .search{
+        margin-top: 55px;
+    }
+    .search-line1{
+        text-align: center;
+        font-size: x-large;
+        margin-inline: 20px;
+    }
+    .line-explore{
+        font-size: 20px;
+    }
+    .search-line2{
+        margin: 0;
+        width: 150px;
+    }
+    .search-bar{
+        margin-left: 20px;
+        width: 400px;
+        height: 60px;
+    }
+    
+    .search i:hover {
+        font-size: 20px;
+    }
+    .categories {
+        left: 5%;
+        right: 5%;
+    }
+    .c {
+        height: 150px;
+        width: 150px;
+        margin: 0px 20px;
+    }
+    
+    .c-logo {
+        height: 100%;
+        width: 100%;
+        min-width: 0;
     }
 }
