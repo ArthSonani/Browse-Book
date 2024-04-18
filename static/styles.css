@@ -1470,10 +1470,6 @@ section {
         padding: 10px;
     }
 
-    .footer-right{
-        font-size: 5px;
-    }
-
     .footer-links{
         font-size: 10px;
     }
@@ -1491,7 +1487,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 35%;
     }
 
     .footer-distributed .footer-left p{
