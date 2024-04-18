@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="my-header">
         <div class="navbar">
             <div class="nav-1">
                 <div class="nav-logo"></div>
@@ -88,7 +88,7 @@
 
             <form action="/explore_events" method="post" class="event-page-option">
 
-                <select class="form-select form-select-sm" aria-label="Small select example" name="category" style="width: 150px; background-color: transparent; color: white;">
+                <select class="form-select form-select-sm explore-select" aria-label="Small select example" name="category">
                     {% if category == 'business' %}
                     <option value="business" selected>Business</option>
                     {% else %}
@@ -133,15 +133,19 @@
          
                 </select>
 
-                {% if city == None %}
-                <input class="form-control" class="ex-search" type="text" name="location" placeholder="Search Location" aria-label="default input example" style="width: 200px; color: rgb(255, 255, 255); background: transparent;">
-                {% else %}
-                <input class="form-control" class="ex-search" type="text" value="{{ city }}" name="location" placeholder="Search Location" aria-label="default input example" style="width: 200px; color: rgb(255, 255, 255); background: transparent;">
-                {% endif %}
+                <div class="explore-search">
+                    {% if city == None %}
+                    <input class="form-control" class="ex-search" type="text" name="location" placeholder="Search Location" aria-label="default input example" style="color: white; background-color: transparent; ">
+                    {% else %}
+                    <input class="form-control" class="ex-search" type="text" value="{{ city }}" name="location" placeholder="Search Location" aria-label="default input example" style="color: white; background-color: transparent; ">
+                    {% endif %}
 
-                <button type="submit" style="background: transparent; border: none; color: white;">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                    &nbsp; &nbsp;
+                    <button type="submit" style="background: transparent; border: none; color: white;">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                
             </form>
         </div>
         
@@ -160,7 +164,7 @@
 
         <div class="cards">
             {% if not events_list %}
-                <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+                <div class="explore-not-found">
                     <h2>RESULT NOT FOUND FOR "{{ category or result }}"</h2>
                 </div>
             {% else %}
