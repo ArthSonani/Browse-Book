@@ -1338,6 +1338,17 @@ section {
 
 
 
+.footer-logo{
+    background-image: url(/static/src/logo.png); 
+    background-size:cover; 
+    width: 120px; 
+    height: 100px;
+}
+
+.description-extra{
+    color: rgba(0, 0, 0, 0.5); 
+}
+
 .my-nav{
     display: none;
 }
@@ -1348,7 +1359,6 @@ section {
     font-weight: 600; 
     margin: 80px;
 }
-
 
 @media (max-width: 500px){
     .my-nav{
@@ -1376,5 +1386,118 @@ section {
     }
     .mb-3 .form-control{
         height: 30px;
+    }
+
+    .visit-card-second-part {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .visit-card-intro-name h1{
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .visit-card-intro-name{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        word-wrap: break-word;
+        max-width: 25vh;
+    }
+
+    .visit-card-banner {
+        width: 100%;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .visit-card-banner-img {
+        height: 250px;
+    }
+
+    .visit-card-intro {
+        width: 100%;
+    }
+
+    .description-intro{
+        max-width: 90vh;
+        word-wrap: break-word;
+    }
+
+    .description-extra{
+        max-width: 90vh;
+        word-wrap: break-word;
+    }
+    
+    .tickets{
+        display: none;
+    }
+
+    .side-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .t1{
+        padding: 0;
+    }
+
+    .ticket-info{
+        padding: 15px;
+        max-width: 90vh;
+        word-wrap: break-word;
+    }
+
+    .date-and-time{
+        padding: 15px;
+        max-width: 90vh;
+        word-wrap: break-word;
+    } 
+    
+    .location{
+        padding: 15px;
+        max-width: 90vh;
+        word-wrap: break-word;
+    } 
+    
+    .spread-the-word-box{
+        padding: 15px;
+    }
+   
+    .footer-distributed{
+        padding: 10px;
+    }
+
+    .footer-right{
+        font-size: 5px;
+    }
+
+    .footer-links{
+        font-size: 10px;
+    }
+
+    .footer-logo{
+        width: 60px; 
+        height: 50px;
+    }
+  
+    .footer-distributed .footer-right{
+        width: 60%;
+    }
+
+    .footer-distributed .footer-left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+    }
+
+    .footer-distributed .footer-left p{
+        text-align: center;
+    }
+
+    .footer-distributed{
+        height: 280px;
     }
 }
