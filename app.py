@@ -324,7 +324,7 @@ def explore_events():
             events_list = db.execute("SELECT * FROM events JOIN tickets ON events.event_id = tickets.event_id WHERE category = ?", category)
             location = None
 
-        return render_template('explore_events.html', event_list = events_list, category = category, city = location, headline = headlines[category], category_bg = category_bg)
+        return render_template('explore_events.html', event_list = events_list, category = category.upper(), city = location, headline = headlines[category], category_bg = category_bg)
 
     else:
 
