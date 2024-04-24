@@ -357,7 +357,6 @@ def visit_event():
         event_id = request.args.get('id')
 
         event_details = db.execute("SELECT * FROM events WHERE event_id = ?",event_id)[0]
-        rating_details = db.execute("SELECT * FROM ratings WHERE event_id = ?", event_id)
         ticket_details = db.execute("SELECT * FROM tickets WHERE event_id = ?", event_id)[0]
         
         if event_details['event_mode'] == 'offline':
@@ -366,4 +365,4 @@ def visit_event():
         else:
             location_details = None
 
-        return render_template('visit_event.html', event=event_details, ratings=rating_details, tickets=ticket_details, locations=location_details)
+        return render_template('visit_event.html', event=event_details, tickets=ticket_details, locations=location_details)
